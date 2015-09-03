@@ -50,12 +50,13 @@
 
     <div id="error"></div>
     <input type="button" id="shuffler" value="shuffle" />
-    <input type="button" id="draw" value="draw a card" />
+    <input type="button" id="drawn" value="draw a card" />
     <input type="button" id="addCard" value="add drawn card back" />
     <input type="button" id="shuffleDraw" value="shuffle, then draw" />
     <input type="button" id="orderByRank" value="order by rank" />
     <input type="button" id="orderBySuit" value="order by suit" />
     <h2>Card Deck</h2>
+    <img src="https://t1.ftcdn.net/jpg/00/41/86/70/400_F_41867042_GCVPmHVmwKhZLlcRKyFn6rDAvdKx9eQF.jpg" id='draw' alt="">
     <div id="cardDeck"></div>
     <br />
     <h2>Drawn Cards</h2>
@@ -68,7 +69,8 @@
          * example throwing cards on the table
          */
         $(document).ready(function(){
-            var cardDeck = $("#cardDeck").playingCards();
+
+            var cardDeck = $("#cardTable").playingCards();
             cardDeck.spread(); // show it
 
             var hand = [];

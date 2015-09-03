@@ -121,11 +121,11 @@ if (Array.indexOf === undefined) {
 
     playingCards.prototype.orderByRank = function() {
         this.cards.sort(compareRank);
-    }
+    };
 
     playingCards.prototype.orderBySuit = function() {
         this.init();
-    }
+    };
 
     /*
      * requires jquery (currently)
