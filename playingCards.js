@@ -84,6 +84,11 @@ if (Array.indexOf === undefined) {
     playingCards.prototype.draw = function() {
         return this.cards.length > 0 ? this.cards.pop() : null;
     };
+    playingCards.prototype.flip = function() {
+        console.log('hello');
+        return this.cards.length > 0 ? this.cards.slice() : null;
+
+    };
     /**
      * add a card to the top of the deck
      */

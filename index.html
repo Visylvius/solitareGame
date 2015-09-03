@@ -56,7 +56,7 @@
     <input type="button" id="orderByRank" value="order by rank" />
     <input type="button" id="orderBySuit" value="order by suit" />
     <h2>Card Deck</h2>
-    <img src="https://t1.ftcdn.net/jpg/00/41/86/70/400_F_41867042_GCVPmHVmwKhZLlcRKyFn6rDAvdKx9eQF.jpg" id='draw' alt="">
+    <img src="https://t1.ftcdn.net/jpg/00/41/86/70/400_F_41867042_GCVPmHVmwKhZLlcRKyFn6rDAvdKx9eQF.jpg" id='flip' alt="">
     <div id="cardDeck"></div>
     <br />
     <h2>Drawn Cards</h2>
@@ -109,6 +109,12 @@
                 cardDeck.orderBySuit();
                 cardDeck.spread(); // update card table
             }
+            var doFlipCard = function() {
+              cardDeck.flip();
+              cardDeck.spread();
+              showHand();
+            }
+            $('#flip').click(doFlipCard);
             $('#shuffler').click(doShuffle);
             $('#draw').click(doDrawCard);
             $('#shuffleDraw').click(function(){
